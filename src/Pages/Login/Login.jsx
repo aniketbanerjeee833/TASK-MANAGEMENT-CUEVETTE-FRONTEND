@@ -115,7 +115,7 @@ export default function Login() {
         setLoginLoading(true)
         setRegisterLoading(false)
 
-        const response = await axios.post(`http://localhost:5000/api/v1/user/login`, { email, password },
+        const response = await axios.post(`https://task-management-cuevette-backend.onrender.com/api/v1/user/login`, { email, password },
           { headers: { "Content-Type": "application/json" }, withCredentials: true, }
         )
 
@@ -175,7 +175,7 @@ export default function Login() {
         try {
           setLoginLoading(false)
           setRegisterLoading(true)
-          const response = await axios.post(`http://localhost:5000/api/v1/user/register`, { userName, email, password },
+          const response = await axios.post(`https://task-management-cuevette-backend.onrender.com/api/v1/user/register`, { userName, email, password },
             { withCredentials: true, headers: { "Content-Type": "application/json" } }
           )
           console.log(response)

@@ -226,7 +226,7 @@ const handleCheckListDoneDropDown = (taskId) => {
             
            
             // try {
-            //   const response = await axios.patch(`http://localhost:5000/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
+            //   const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
             //     headers: {
             //       Authorization: `Bearer ${token}`
             //     }
@@ -244,7 +244,7 @@ const handleCheckListDoneDropDown = (taskId) => {
             const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
             try {
-              const response = await axios.patch(`http://localhost:5000/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
+              const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
                 headers: {
                   Authorization: `Bearer ${token}`
                 }
@@ -314,7 +314,7 @@ const handleCheckListDoneDropDown = (taskId) => {
             setMultipleThreeDotsToDo([]);
             setMultipleThreeDotsInProgress([])
             setMultipleThreeDotsDone([])
-            navigator.clipboard.writeText(`http://localhost:5173/singleTask/${taskId}`)
+            navigator.clipboard.writeText(`https://task-management-cuevette-backend.onrender.com/singleTask/${taskId}`)
             //navigator.clipboard.writeText(`http://localhost:5173/singleStory/${singleStoryId}/${currentIndex}`)
     //navigator.clipboard.writeText(`https://social-media-cuevette-frontend-three.vercel.app/${singleStoryId}/${currentIndex}`)
       //navigator.clipboard.writeText(`https://social-media-cuevette-frontend-three.vercel.app/singleStory/${singleStoryId}/${currentIndex}`)

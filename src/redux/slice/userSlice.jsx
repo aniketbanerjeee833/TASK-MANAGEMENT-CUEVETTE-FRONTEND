@@ -104,7 +104,7 @@ export const fetchUser = () => async (dispatch) => {
     const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
       dispatch(userSlice.actions.fetchUserRequest());
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/user/me",
+        const response = await axios.get("https://task-management-cuevette-backend.onrender.com/api/v1/user/me",
           {
             headers:{
               Authorization:`Bearer ${token}`
@@ -126,7 +126,7 @@ export const fetchUser = () => async (dispatch) => {
       const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
         dispatch(userSlice.actions.assigneeListFailed());
         try {
-          const response = await axios.get("http://localhost:5000/api/v1/user/exceptMe",
+          const response = await axios.get("https://task-management-cuevette-backend.onrender.com/api/v1/user/exceptMe",
             {
               headers:{
                 Authorization:`Bearer ${token}`

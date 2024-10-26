@@ -60,7 +60,7 @@ export default function Home() {
 //   try {
 
 
-//     const response = await axios.get(`http://localhost:5000/api/v1/task/allMyTasksToday/${date}`,{
+//     const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasksToday/${date}`,{
 //         headers: {
 //           Authorization: `Bearer ${token}`
 //         }
@@ -198,7 +198,7 @@ console.log(today)
         const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
         try {
           const response = await axios.get(
-            "http://localhost:5000/api/v1/user/logout",
+            "https://task-management-cuevette-backend.onrender.com/api/v1/user/logout",
             {
               headers: {
                   Authorization: `Bearer ${token}`

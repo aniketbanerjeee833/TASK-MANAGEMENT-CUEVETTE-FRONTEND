@@ -79,7 +79,7 @@ export default function SettingsComponent() {
   
         }
         try {
-          const response = await axios.put("http://localhost:5000/api/v1/user/updateUser",
+          const response = await axios.put("https://task-management-cuevette-backend.onrender.com/api/v1/user/updateUser",
             { oldPassword,newPassword,email,userName},
              {
                 headers:{
