@@ -218,8 +218,8 @@ console.log(today,thisWeek1,thisWeek)
             localStorage.removeItem("APP-TOKEN")
             dispatch(logoutSuccess());
             toast.success(response.data.message);
-            // navigate("/login")
-            window.location.href = "/login"
+            navigate("/login")
+            // window.location.href = "/login"
             
           }
          
