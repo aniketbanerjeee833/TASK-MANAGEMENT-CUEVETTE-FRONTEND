@@ -1,0 +1,390 @@
+.shared-task-section{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 98vh;
+    position: relative;
+}
+
+
+.shared-task-div{
+    /* Frame 1048 */
+    border: 2px solid #EDF5FE;
+box-sizing: border-box;
+padding: 1rem 2rem;
+gap:1rem;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+/* padding: 62px 33px;
+gap: 50px; */
+
+width: 520px;;
+/* position: absolute;
+width: 654px;
+height: 546px;
+left: calc(50% - 654px/2);
+top: calc(50% - 546px/2 - 108px); */
+
+background: #FFFFFF;
+/* border: 2px solid #EDF5FE; */
+
+border-radius: 8px;
+
+
+}
+.shared-task-div-top{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items:center ;
+     & span{
+/* HIGH PRIORITY */
+
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+color: #707070;
+
+
+     }
+}
+
+.shared-task-div-top-heading{
+   & span{
+    /* Hero section */
+
+width: 139px;
+height: 15px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+   }
+}
+.shared-task-div-checklist-heading{
+     & span{
+        
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+     }
+}
+.shared-task-div-checklist-content-all-divs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    max-height: 300px; /* Adjust this height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  /* Optional: add a border */
+ 
+  padding-right: 10px;
+/* Optional: add padding */
+
+}
+.shared-task-div-checklist-content-all-divs::-webkit-scrollbar {
+    width: 8px;
+  
+}
+
+.shared-task-div-checklist-content-all-divs::-webkit-scrollbar-track {
+    margin-left: 20px;
+    background:  white;
+}
+
+.shared-task-div-checklist-content-all-divs::-webkit-scrollbar-thumb {
+    background:  #8DAAB9CC;
+}
+
+.shared-task-div-checklist-content-all-divs::-webkit-scrollbar-thumb:hover {
+    background:  #8DAAB9CC;
+}
+.shared-task-div-checklist-content{
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+
+align-items: flex-start;
+padding: 12px;
+gap: 10px;
+
+width: 450px;
+height: 40px;
+
+border: 1px solid #E2E2E2;
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+    align-items: flex-start;
+
+    & span{
+    
+
+/* width: 80px;
+height: 19px; */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+    }
+
+}
+.shared-task-div-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;;
+
+    & span{
+        /* Due Date */
+/* 
+width: 65px;
+height: 10px; */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+    }
+
+   
+}
+
+.shared-task-div-button-due-date-present{
+    background: #CF3636;
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px 10px;
+gap: 10px;
+
+width: 60px;
+height: 20px;
+
+background: #CF3636;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+    color: white;
+}
+
+.shared-task-div-project-name{
+   position: absolute;
+   top:10px;
+   left:30px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   & span{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    color: #000000;
+    
+    
+        }
+    }
+  
+
+@media screen and (max-width: 768px) {
+    .shared-task-div {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+/* 
+        position: relative; */
+    }
+
+    .shared-task-div-project-name{
+        position: absolute;
+        top:80px;
+        left:10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & span{
+     
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 20px;
+         /* identical to box height */
+         
+         color: #000000;
+         
+         
+             }
+         }
+    /* .shared-task-div-project-name{
+        display: flex;
+        align-items: flex-start;
+        opacity: 1;
+        /* height:5vh; */
+   
+ 
+    /* & span{
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+
+
+
+
+    }
+
+    .shared-task-div-checkList{
+        width: 100%;  
+    }
+    .shared-task-div-top, 
+    .shared-task-div-checklist-content-all-divs {
+        width: 100%;
+        /* margin-top: 20px; */
+    }
+
+
+    .shared-task-div-button span {
+        font-size: 16px;
+    }
+
+    .shared-task-div-checklist-content {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+
+@media screen and (max-width: 480px) {
+    .shared-task-section {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .shared-task-div {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        box-sizing: border-box;
+        display: flex;
+       margin-top: 120px;
+    }
+
+    .shared-task-div-project-name{
+        position: absolute;
+        top:80px;
+        left:10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & span{
+     
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 20px;
+         /* identical to box height */
+         
+         color: #000000;
+         
+         
+             }
+         }
+    
+
+    .shared-task-div-top-heading span, 
+    .shared-task-div-checklist-heading span, 
+    .shared-task-div-button span {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .shared-task-div-checklist-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .shared-task-div-button-due-date-present {
+        width: 60px;
+        height: 18px;
+        padding: 4px 8px;
+    }
+}
+

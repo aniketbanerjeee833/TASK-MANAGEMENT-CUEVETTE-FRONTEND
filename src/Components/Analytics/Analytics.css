@@ -1,0 +1,133 @@
+
+.right-home-analytics-div-top{
+    padding-top: 0.3rem;
+    height:50px;
+     & span{
+/* Analytics */
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+align-items: center;
+
+color: #000000;
+
+
+     }
+}
+.right-home-analytics-div-bottom{
+  
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    padding-right: 100px;
+}
+.right-home-analytics-div-bottom-left{
+  
+    /* Rectangle 11188 */
+gap:20px;
+display: flex;
+flex-direction: column;
+/* width: 100%; */
+height: 180px;
+padding-left: 1rem;
+padding-top: 1rem;
+padding-right: 1rem;
+background: #F9FCFF;
+border-radius: 12px;
+
+  
+}
+
+.right-home-analytics-div-bottom-right{
+ 
+    /* Rectangle 11188 */
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+
+/* width: 100%; */
+height: 180px;
+
+padding-left: 1rem;
+padding-top: 1rem;
+padding-right: 1rem;
+background: #F9FCFF;
+border-radius: 12px;
+
+  
+}
+
+.right-home-analytics-common-div-bottom{
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+
+    & span{
+        font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+align-items: center;
+
+color: #000000;
+    }
+}
+
+.right-home-analytics-common-div-bottom-right{
+    display: flex;
+    gap:10px;
+    align-items: center;
+
+    & span{
+        /* In-Progress Tasks */
+
+/* width: 147px;
+height: 13px; */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+/* leading-trim and text-edge are draft CSS properties.
+
+Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+
+leading-trim: both;
+text-edge: cap;*/
+
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+    }
+}
+.right-home-analytics-common-div-bottom-priority{
+/* Ellipse 3 */
+
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: #90C4CC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+

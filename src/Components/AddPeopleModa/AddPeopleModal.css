@@ -1,0 +1,75 @@
+.add-people-modal-section{
+    background-color: white;
+    
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    
+    
+    background-color: rgba(47, 47, 47, 0.75);
+}
+.add-people-modal-div{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    width:25rem;
+    height:8rem;
+position:fixed;
+top:35%;
+left: 40%;
+
+
+background: #FFFFFF;
+box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.25);
+border-radius: 20px;
+
+
+padding: 2rem 3rem;
+
+}
+
+.add-people-modal-div-top{
+  
+& span{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 10px;
+    /* /* leading-trim and text-edge are draft CSS properties.
+    
+    Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+    */
+    /* leading-trim: both;
+    text-edge: cap; */ 
+    text-align: center;
+    
+    color: #000000;
+}
+
+
+
+}
+.add-people-modal-div-middle{
+    /* Rectangle 11190 */
+& input{
+    width: 97%;
+    height:30px;
+
+    background: #FFFFFF;
+    border: 1px solid #767575;
+    border-radius: 10px;
+    padding-left: 1rem;
+
+    outline: none;
+}
+
+
+}
+.add-people-modal-div-button{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,174 @@
+
+
+.right-home-settings-div-top{
+  padding-top: 0.3rem;
+  height:50px;
+  & span{
+/* Analytics */
+
+padding-top: 1rem;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+align-items: center;
+
+color: #000000;
+
+
+  }
+}
+
+.right-home-settings-div-bottom{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+/* .right-home-settings-div-bottom-common-div{
+    border: 1px solid black;
+} */
+
+.second-div{
+  position: relative;
+   & input{
+    padding-left: 2rem;
+    /* Email */
+
+width: 490px;
+height: 40px;
+/* Placeholder */
+/* 
+width: 55px;
+height: 26px; */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+align-items: center;
+
+color: #828282;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Input content */
+outline: none;
+box-sizing: border-box;
+
+/* position: absolute;
+left: 0px;
+right: 0.39px;
+top: 0px;
+bottom: 0.13px; */
+
+border: 1.3782px solid #D0D0D0;
+border-radius: 11.0256px;
+
+   }
+}
+.common-settings-icon{
+position: absolute;
+top:10px;
+left: 10px;
+/* lock */
+color: gray;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.eye-icon-active{
+      
+    color:grey;
+     position: absolute;
+    /* top:-22px;
+    left:230px; */
+   padding-top: 0.7rem;
+    left: 470px;
+    top:0px;
+    /* right: -10px; */
+    cursor: pointer;
+
+  }
+  
+  .eye-icon{
+    
+    color:grey;
+    left: 470px;
+    top:0px;
+    padding-top: 0.7rem; 
+   position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+
+  }
+
+  .right-home-settings-div-bottom-common-div{
+    display: flex;
+    & button{
+      /* Button */
+      cursor: pointer;
+border: none;
+/* Auto layout */
+display: flex;
+
+justify-content: center;
+align-items: center;
+/* padding: 0px 132.307px;
+gap: 11.03px; */
+
+width: 490px;
+height: 40px;
+
+background: #17A2B8;
+border-radius: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+/* label */
+
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 25px;
+/* identical to box height */
+
+text-align: center;
+
+/* Palette / jnt-white-color */
+color: #FFFFFF;
+
+
+
+/* Inside auto layout */
+/* flex: none;
+order: 1;
+flex-grow: 0; */
+
+
+    }
+  }

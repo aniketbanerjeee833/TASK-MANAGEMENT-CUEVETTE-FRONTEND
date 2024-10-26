@@ -1,0 +1,256 @@
+.login-section{
+    
+    display: grid;
+    height: 98vh;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.login-left{
+    
+
+
+
+background: #17A2B8;
+backdrop-filter: blur(16.5384px);
+/* Note: backdrop-filter has minimal browser support */
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.login-left-image{
+    position: relative;
+    z-index: 1;
+}
+.login-left-circle{
+    position: absolute;
+/* bottom: -10px; */
+    width: 320px; /* Set the width of the circle */
+    height: 320px; /* Set the height of the circle (should be equal to width for a perfect circle) */
+    background-color: #317F8B; /* Circle color */
+    border-radius: 50%; /* Makes the div a circle */
+    top: 50%; /* Adjust positioning */
+    left: 50%; /* Adjust positioning */
+    transform: translate(-48%, -70%); /* Centers the circle */
+    z-index: 0; /* Puts the circle behind the image */
+}
+.login-left-image-bottom-text{
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+     & .login-left-image-bottom-text-first{
+        /* Welcome aboard my friend just a couple of clicks and we start */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 200%;
+/* or 66px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Palette / jnt-white-color */
+color: #FFFFFF;
+
+
+     }
+     & .login-left-image-bottom-text-second{
+        /* Welcome aboard my friend just a couple of clicks and we start */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 50%;
+/* or 66px */
+display: flex;
+align-items: center;
+text-align: center;
+opacity: 0.8;
+/* Palette / jnt-white-color */
+color: #FFFFFF;
+
+
+     }
+
+}
+
+.login-right{
+   
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.form-div{
+    margin-top: 20px;
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+}
+.register-div , .login-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     & span{
+        /* Login */
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 35px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+/* Text / jnt-primary-text-dark-color */
+color: #343434;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+     }
+}
+.login-signup-write{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     & span{
+/* Have no account yet? */
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+align-items: center;
+
+color: #828282;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+     }
+}
+
+.login-bottom-div{
+    margin-top: 10px;;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.common-submit-button-register , .common-submit-button-login{
+          /* Button */
+border: none;
+/* Auto layout */
+display: flex;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+
+width: 490px;
+height: 40px;
+
+background: #17A2B8;
+border-radius: 40px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 25px;
+/* identical to box height */
+
+text-align: center;
+
+/* Palette / jnt-white-color */
+color: #FFFFFF;
+
+
+
+}
+
+.common-submit-button-div{
+      
+    & .common-submit-button {
+        cursor: pointer;
+          /* Button */
+          border: none;
+          /* Auto layout */
+          display: flex;
+          
+          justify-content: center;
+          align-items: center;
+          
+          width: 490px;
+          height: 40px;
+          
+         
+          border-radius: 40px;
+          
+          /* Inside auto layout */
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+          
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 25px;
+          /* identical to box height */
+          
+          text-align: center;
+          
+          /* Palette / jnt-white-color */
+          color:  #17A2B8;
+          
+          /* Button */
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+
+border: 1.5px solid #17A2B8;
+
+
+/* Inside auto layout */
+
+
+          
+    }
+}
+

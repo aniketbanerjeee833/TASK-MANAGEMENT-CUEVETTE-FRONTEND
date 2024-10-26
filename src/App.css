@@ -1,0 +1,56 @@
+/* *{
+    box-sizing: border-box;
+} */
+.common-modal-buttons{
+    /* btn */
+
+/* Auto layout */
+cursor: pointer;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/* align-items: flex-start;
+padding: 17px 4px; */
+/* gap: 10px; */
+
+width: 200px;
+height: 40px;
+
+background: #17A2B8;
+
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Yes, Delete */
+
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 10px;
+/* or 119% */
+/* leading-trim and text-edge are draft CSS properties.
+
+Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+*/
+/* leading-trim: both;
+text-edge: cap;
+text-align: center; */
+text-align: center; 
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}

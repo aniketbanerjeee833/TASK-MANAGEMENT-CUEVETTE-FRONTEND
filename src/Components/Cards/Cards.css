@@ -1,0 +1,2884 @@
+
+
+.common-top-div{
+ 
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    & span{
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+
+    }
+     & .common-top-div-right{
+        gap: 5px;
+        align-items: center;
+     }
+}
+
+.to-do-top-div{
+    width: 190px;
+ 
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    & span{
+      
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;  
+    }
+    & .common-top-div-right{
+        gap: 5px;
+        display: flex;
+        align-items: center;
+     }
+}
+   
+ 
+    .common-collapse-icon{
+        width: 20px;
+        height: 20px;
+        /* Group */
+    cursor: pointer;
+        /* cursor: pointer; */
+    
+    color: #767575;
+    }
+
+
+
+.common-collapse-icon{
+    cursor: pointer;
+}
+.to-do-div{
+   
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    overflow-x: hidden;
+background: #EEF2F5;
+border-radius: 10px;
+
+overflow-y: auto; /* Enable vertical scrolling */
+border: 1px solid #ccc; /* Optional: add a border */
+padding: 10px; /* Optional: add padding */
+background-color:#EEF2F5 ;
+max-height: 550px;
+
+}
+.backlog-div{
+   
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    gap:1rem;
+background: #EEF2F5;
+border-radius: 10px;
+overflow-x: hidden;
+max-height: 550px;
+ /* Adjust this height as needed */
+overflow-y: auto; /* Enable vertical scrolling */
+border: 1px solid #ccc; /* Optional: add a border */
+padding: 10px; /* Optional: add padding */
+background-color:#EEF2F5 ;
+}
+.done-div{
+    
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    overflow-x: hidden;
+background: #EEF2F5;
+border-radius: 10px;
+max-height: 550px;
+overflow-y: auto; /* Enable vertical scrolling */
+border: 1px solid #ccc; /* Optional: add a border */
+padding: 10px; /* Optional: add padding */
+background-color:#EEF2F5 ;
+
+}
+.in-progress-div{
+   
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    overflow-x: hidden;
+background: #EEF2F5;
+border-radius: 10px;
+padding: 10px;
+overflow-y: auto; /* Enable vertical scrolling */
+border: 1px solid  #EEF2F5;
+background-color:#EEF2F5 ;
+max-height: 550px;
+/* Optional: add a border */
+padding: 10px; /* Optional: add padding */
+}
+
+.common-to-do-top-div-right-icon{
+    cursor: pointer;
+}
+
+.backlog-div::-webkit-scrollbar, .to-do-div::-webkit-scrollbar, .in-progress-div::-webkit-scrollbar, .done-div::-webkit-scrollbar{
+    width: 8px;
+}
+
+.backlog-div::-webkit-scrollbar-track, .to-do-div::-webkit-scrollbar-track, 
+.in-progress-div::-webkit-scrollbar-track, .done-div::-webkit-scrollbar-track {
+    /* background:  #8DAAB9CC; */
+    background-color: #D6EAF4;
+
+}
+
+.backlog-div::-webkit-scrollbar-thumb, .to-do-div::-webkit-scrollbar-thumb, 
+.in-progress-div::-webkit-scrollbar-thumb, .done-div::-webkit-scrollbar-thumb {
+     background-color:  #8DAAB9CC; 
+    /* background-color: #D6EAF4;
+
+    background-color:#EEF2F5 ; */
+}
+
+.backlog-div::-webkit-scrollbar-hover, .to-do-div::-webkit-scrollbar-hover, 
+.in-progress-div::-webkit-scrollbar-hover, .done-div::-webkit-scrollbar-hover {
+     background-color:  #8DAAB9CC; 
+    /* background-color: #D6EAF4;
+
+    background-color:#EEF2F5 ; */
+}
+
+
+.common-task-cards{
+    /* width: auto; */
+    /* Rectangle 292 */
+     width: 180px; 
+padding: 0.8rem;
+
+background: #FFFFFF;
+border-radius: 10px;
+ 
+}
+.common-task-cards-top-div{
+    display: flex;
+    justify-content: space-between;
+     
+   
+   
+
+    & .common-task-cards-top-div-left{
+     
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    & .common-task-cards-top-div-right{
+       
+        position: relative;
+      
+        & .common-task-cards-top-div-right-icon{
+            cursor: pointer;
+           color: #000000;
+           width: 20px;
+    
+            
+        }
+
+    }
+
+
+}
+
+
+.common-task-cards-high-priority-span, .common-task-cards-low-priority-span ,.common-task-cards-medium-priority-span{
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+color: #707070;
+
+
+}
+.common-task-cards-top-div-three-dots-open{
+    display: flex;
+    flex-direction: column;
+    z-index: 10; 
+    
+    position: absolute;
+/*  
+  left: 500px;
+  top:180px; */
+  top: 50%; /* Positioning below the three-dots */
+  right: 0;
+ width: 90px;
+ 
+ height: 60px;
+padding-left: 1rem;
+background: #FFFFFF;
+border-radius: 8px;
+
+background: #FFFFFF;
+box-shadow: 0px 2px 22px 0px #7E7A7A40;
+padding-top: 10px;
+padding-left: 10px;
+
+
+& span{
+    cursor: pointer;
+   /* Edit */
+cursor: pointer;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+    background: transparent;
+}
+}
+.common-task-cards-high-priority-div{
+    /* Ellipse 2 */
+
+
+width: 9px;
+height: 9px;
+border-radius: 50%;
+
+background: #FF2473;
+
+}
+.common-task-cards-medium-priority-div{
+
+
+background: #18B0FF;
+
+
+width: 9px;
+height: 9px;
+border-radius: 50%;
+
+
+}
+.common-task-cards-low-priority-div{
+
+
+    background: #63C05B;
+
+    
+    
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    
+    
+    }
+
+    .common-task-cards-top-div-left-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #FFEBEB;
+        font-size: 10px;
+        text-transform: uppercase;
+        /* AK */
+
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 7px;
+line-height: 9px;
+letter-spacing: 0.5px;
+
+color: #000000;
+
+
+             
+
+
+    }
+
+.common-task-cards-title{
+    /* Hero section */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+
+.common-task-cards-title-tooltip{
+    
+    position: relative;
+    cursor: pointer;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+    /* visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0; */
+  
+    /* Position the tooltip */
+ 
+  }
+  
+  
+
+  .common-task-cards-title-tooltip:hover::after {
+    font-family: 'Poppins';
+    background-color: white;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height */
+width: 170px;
+height: 60px;
+
+    content: attr(title); /* Display the full title */
+    position: absolute;
+    /* background: #333;  */
+color: black;
+    padding: 5px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    overflow: hidden; /* Prevent overflow */
+    overflow-wrap: break-word;
+    /* white-space: nowrap;  */
+    white-space: normal;
+    z-index: 10;
+    bottom: calc(100% + 5px);
+   
+    /* Position above the element with a small gap */
+    left: 5%; /* Center tooltip */
+    /* transform: translateX(-50%); */
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Ensure opacity */
+}
+
+.delete-span{
+    color: red;
+}
+.common-task-cards-middle-div{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+  
+     & span{
+        /* Checklist (1/3) */
+
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 15px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+     }
+}
+.common-task-cards-middle-div-icon{
+
+ background-color:  #EEECEC;
+ /* Arrow - Down 2 */
+color: gainsboro;
+
+
+}
+.common-task-cards-middle-div-checklist{
+    display: flex;
+    /* position: relative;
+
+  top:20px; */
+   flex-direction: column;
+   
+    max-height: 100px; /* Adjust this height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+ 
+
+    /* padding: 10px; */
+gap:8px;
+margin-top: 10px;
+    & .common-task-cards-middle-div-checklist-content{
+        /* Frame 1027 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+
+align-items: center;
+/* padding: 12px; */
+gap: 10px;
+
+
+height: 30px;
+
+border: 1px solid #E2E2E2;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+& .checkbox1{
+    cursor: pointer;
+}
+
+    }
+
+}
+.common-task-cards-middle-div-checklist::-webkit-scrollbar {
+    width: 8px;
+}
+
+.common-task-cards-middle-div-checklist::-webkit-scrollbar-track {
+    background:  #8DAAB9CC;
+}
+
+.common-task-cards-middle-div-checklist::-webkit-scrollbar-thumb {
+    background:  #8DAAB9CC;
+}
+
+.common-task-cards-middle-div-checklist::-webkit-scrollbar-thumb:hover {
+    background:  #8DAAB9CC;
+}
+
+.common-task-cards-middle-div-checklist-content{
+    display: flex;
+
+  
+   
+}
+.common-task-cards-middle-div-icon{
+   cursor: pointer; 
+}
+
+.common-task-cards-bottom-div{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+   
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+   
+    & .common-task-cards-bottom-div-button{
+       
+        display: flex;
+        cursor: pointer;
+        gap:5px;
+      
+
+        & button{
+            /* Frame 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/* BACKLOG */
+
+width: 40px;
+height: 10px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+color: #767575;
+border: none;
+
+
+
+
+background: #EEECEC;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+cursor: pointer;
+           
+            width: 40px;
+            height: 30px;
+        }
+    }
+}
+.common-task-cards-bottom-dueDate-div-active{
+   
+    color:#EEECEC;
+    /* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+
+width: 40px;
+height: 30px;
+
+background: #CF3636;
+border-radius: 5px;
+
+/* Inside auto layout */
+/* flex: none;
+order: 0;
+flex-grow: 0; */
+/* Feb 10th */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+}
+.common-task-cards-bottom-dueDate-doneDiv-active{
+    background-color: green;
+    color:#EEECEC;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+margin: 0 auto;
+width: 40px;
+height: 30px;
+
+border-radius: 5px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Feb 10th */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+
+
+}
+.common-task-cards-bottom-dueDate-div-inactive{
+    
+    /* Frame 4 */
+
+/* Auto layout */
+display: flex;
+justify-content: center;
+align-items: center;
+/* Feb 10th */
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+color: #5A5A5A;
+
+
+
+
+
+
+
+width: 40px;
+height: 30px;
+
+
+border-radius: 5px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* Feb 10th */
+background-color:  #DBDBDB;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+
+
+width: 40px;
+height: 30px;
+border: none;
+   
+  
+}
+.fake-div{
+    width: 40px;
+}
+
+@media screen and (max-height: 920px)  and (max-width: 1280px) {
+    .fake-div{
+        width: 30px;
+    }
+
+    
+       
+    /* .backlog-div {
+        display: flex;
+        /* flex-direction: row; /* Align the cards in a row */
+        /* flex-wrap: wrap;  */
+        /* Allow wrapping if there are too many cards */
+        /* justify-content: space-between;  */
+        
+
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+             /* max-height: 700px;  */
+             /* max-height: auto;  */
+             /* height: auto; */
+             height: 90vh;
+            padding-left: 1rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            width: auto;
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             width: auto; 
+             /* width: 180px;  */
+           
+        }
+
+    .common-task-cards {
+        /* width: 160px;  */
+          width: auto;   
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 1px;
+        }
+    }
+
+    /* .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        /* gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        /* padding-left: 0px;
+        width: auto; */
+     
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     */
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1px;
+        
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:1px;
+          
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 40px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+
+@media screen and (max-height: 920px)  and (max-width: 1200px) {
+    .fake-div{
+        width: 30px;
+    }
+
+    
+       
+    /* .backlog-div {
+        display: flex;
+        /* flex-direction: row; /* Align the cards in a row */
+        /* flex-wrap: wrap;  */
+        /* Allow wrapping if there are too many cards */
+        /* justify-content: space-between;  */
+        
+
+        .common-task-cards-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            
+        }
+        .common-task-cards-title-tooltip{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+        }
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+             /* max-height: 700px;  */
+             /* max-height: auto;  */
+             /* height: auto; */
+             height: 90vh;
+            padding-left: 1rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            /* width: auto; */
+            width: 180px;
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             /* width: auto;   */
+            width: 180px;  
+           
+        }
+
+    .common-task-cards {
+         width: 170px;  
+           /* width: auto;     */
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 3px;
+        }
+    }
+
+    /* .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        /* gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        /* padding-left: 0px;
+        width: auto; */
+     
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    justify-self: start;
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     */
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+    border-radius: 5px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:1px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:1px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 30px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 920px)  and (min-width: 1150px) and (max-width:1200px){
+    .fake-div{
+        width: 30px;
+    }
+
+    
+       
+    /* .backlog-div {
+        display: flex;
+        /* flex-direction: row; /* Align the cards in a row */
+        /* flex-wrap: wrap;  */
+        /* Allow wrapping if there are too many cards */
+        /* justify-content: space-between;  */
+        
+
+        .common-task-cards-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            
+        }
+        .common-task-cards-title-tooltip{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+        }
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+             /* max-height: 700px;  */
+             /* max-height: auto;  */
+             /* height: auto; */
+             height: 90vh;
+            padding-left: 1rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            /* width: auto; */
+            width: 180px;  
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             /* width: auto;   */
+            width: 180px;  
+           
+        }
+
+    .common-task-cards {
+         width: 160px;  
+           /* width: auto;     */
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 1px;
+        }
+    }
+
+    /* .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        /* gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        /* padding-left: 0px;
+        width: auto; */
+     
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    justify-self: start;
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     */
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+    width: 40px;
+    height: 20px;
+    
+    
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:2px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:3px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 30px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 920px)  and (min-width: 1100px) and (max-width: 1150px)  {
+    .fake-div{
+        width: 30px;
+    }
+
+    
+
+        .common-task-cards-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            
+        }
+        .common-task-cards-title-tooltip{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+        }
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+          
+             height: 90vh;
+            padding-left: 1rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            /* width: auto; */
+            width: 170px;  
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             /* width: auto;   */
+            width: 170px;  
+           
+        }
+
+    .common-task-cards {
+         width: 150px;  
+           /* width: auto;     */
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 1px;
+        }
+    }
+
+   
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    justify-self: start;
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+  border-radius: 2px;
+  width: 40px;
+  height: 20px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:2px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:1px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 30px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 920px)  and (min-width: 1050px) and (max-width:1100px){
+    .fake-div{
+        width: 30px;
+    }
+
+    
+
+        .common-task-cards-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            
+        }
+        .common-task-cards-title-tooltip{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+        }
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+             /* max-height: 700px;  */
+             /* max-height: auto;  */
+             /* height: auto; */
+             height: 90vh;
+            padding-left: 1rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            width: auto;
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             width: auto;  
+            width: 170px;  
+           
+        }
+
+    .common-task-cards {
+         /* width: 150px;   */
+           width: auto;    
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 1px;
+        }
+    }
+
+
+     
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    justify-self: start;
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     */
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+    width: 40px;
+    height: 20px;
+    border-radius: 2px;
+  
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:2px;
+      
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:1px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 30px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 920px)  and (min-width: 1200px) and (max-width:1280px) {
+    .fake-div{
+        width: 30px;
+    }
+
+    
+
+        .common-task-cards-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            
+        }
+        .common-task-cards-title-tooltip{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+        }
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+             /* max-height: 700px;  */
+             /* max-height: auto;  */
+             /* height: auto; */
+             height: 90vh;
+            padding-left: 0.8rem;
+             width: auto; 
+         }
+         .to-do-top-div{
+            width: 210px; 
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             /* width: auto;   */
+            width: 210px;  
+           
+        }
+
+    .common-task-cards {
+         width: 180px;  
+           /* width: auto;     */
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-top-div{
+        width: auto;
+        & .common-task-cards-top-div-left{
+            gap: 1px;
+        }
+    }
+
+   
+     
+
+    .common-task-cards-bottom-dueDate-div-active{
+       
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    justify-self: start;
+    text-align: center;
+    margin-left: 0px;
+    /* gap: 10px; */
+    
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background: #CF3636;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+    
+    
+    border: none;
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        color:#EEECEC;
+        /* Frame 4 */
+    
+    /* Auto layout */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+     */
+
+     text-align: center;
+    gap: 10px;
+    
+/* 
+    width: 30px;
+    height: 20px; */
+    border-radius: 2px;
+    width: 40px;
+    height: 20px;
+    
+    margin-left: 0px;
+   
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    background-color:  #DBDBDB;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: black;
+    
+    
+    border: none;
+       
+      
+    }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+  text-align: center;
+    
+  border-radius: 2px;
+  width: 40px;
+  height: 20px;
+    
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:1px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:5px;
+            justify-self: end;
+           margin-left: 24px; 
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 35px;
+    height: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1280px) and (max-width:1350px)  {
+    .fake-div{
+        width: 40px;
+    }
+
+    
+       
+    /* .backlog-div {
+        display: flex;
+        /* flex-direction: row; /* Align the cards in a row */
+        /* flex-wrap: wrap;  */
+        /* Allow wrapping if there are too many cards */
+        /* justify-content: space-between;  */
+        
+
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+           /* height: auto; */
+            padding-left: 1rem;
+            max-height: auto;
+
+             height: 90vh; 
+            /* max-height: 800px; */
+             width: auto; 
+             overflow-y: auto;
+         }
+         .to-do-top-div{
+             width: auto; 
+            /* width: 220px;  */
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             /* width: auto;  */
+         width: 210px; 
+            height: auto;
+        }
+
+    .common-task-cards {
+        /* height: auto; */
+         /* width: 190px;  */
+         width: auto;   
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        padding-left: 0px;
+       
+    }
+
+    .common-task-cards-bottom-dueDate-div-active{
+      margin-left: 0px;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+   
+    /* align-items: flex-start; */
+    gap: 10px;
+    
+  
+    width: 45px;
+    height: 25px;
+    
+    border-radius: 5px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        margin-left: 0px;
+          color:#EEECEC;
+          color: black;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+width: 45px;
+height: 25px;
+
+border-radius: 5px;
+color: #5A5A5A;
+      /* display: flex;
+      flex-direction: row; */
+  
+      }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    
+
+    width: 45px;
+    height: 25px;
+    
+    border-radius: 5px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+   
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:1px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:1px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 45px;
+    height: 25px;
+   
+    
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .fake-div{
+        width: 40px;
+    }
+
+    
+       
+    /* .backlog-div {
+        display: flex;
+        /* flex-direction: row; /* Align the cards in a row */
+        /* flex-wrap: wrap;  */
+        /* Allow wrapping if there are too many cards */
+        /* justify-content: space-between;  */
+        
+
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+           /* height: auto; */
+            padding-left: 1rem;
+            /* max-height: auto; */
+            /* max-height: 0; */
+             height: 100vh; 
+            /* max-height: 800px; */
+             width: auto; 
+             overflow-y: auto;
+         }
+         .to-do-top-div{
+            width: auto;
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             width: auto; 
+         /* width: 220px;  */
+            height: auto;
+        }
+
+    .common-task-cards {
+        height: auto;
+         /* width: 200px;  */
+         width: auto;  
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        padding-left: 0px;
+       
+    }
+
+    .common-task-cards-bottom-dueDate-div-active{
+      margin-left: 0px;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+   
+    /* align-items: flex-start; */
+    gap: 10px;
+    
+  
+    width: 40px;
+    height: 25px;
+    
+    border-radius: 5px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        margin-left: 0px;
+          color:#EEECEC;
+          color: black;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 12px;
+/* identical to box height */
+width: 40px;
+height: 25px;
+color: #5A5A5A;
+      /* display: flex;
+      flex-direction: row; */
+  
+      }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    
+
+    width: 40px;
+    height: 25px;
+    
+    border-radius: 5px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:1px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:5px;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    width: 40px;
+    height: 25px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .fake-div{
+        width: 40px;
+    }
+
+
+
+         /* Full width for larger screens */
+         .backlog-div ,.to-do-div, .in-progress-div, .done-div{
+            /* width: 220px; */
+           /* height: auto; */
+            padding-left: 1rem;
+            /* max-height: auto; */
+            /* max-height: 0; */
+             height: 100vh; 
+            /* max-height: 800px; */
+             width: auto; 
+             overflow-y: auto;
+         }
+         .to-do-top-div{
+            width: auto;
+         }
+         .common-top-div{
+ 
+            display: flex;
+            justify-content: space-between;
+             width: auto; 
+         /* width: 220px;  */
+            height: auto;
+        }
+
+    .common-task-cards {
+        height: auto;
+         /* width: 200px;  */
+         width: auto;  
+         padding: 0.5rem;
+        /* Increase the width of task cards on large screens */
+        /* padding: 1rem;  */
+        /* Adjust padding */
+    }
+
+    .common-task-cards-bottom-div{
+        display: flex;
+         justify-content: space-between;  
+        /* gap: auto; */
+        gap:0px;
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        padding-left: 0px;
+        margin-right: 10px;
+       
+    }
+
+    .common-task-cards-bottom-dueDate-div-active{
+      margin-left: 0px;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+   
+    /* align-items: flex-start; */
+    gap: 10px;
+    
+  
+    width: 30px;
+    height: 20px;
+    
+     /* width: auto;
+     height: auto; */
+    border-radius: 3px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+
+    .common-task-cards-bottom-dueDate-div-inactive{
+        margin-left: 0px;
+          color:#EEECEC;
+          color: black;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 12px;
+border-radius: 3px;
+/* identical to box height */
+width: 30px;
+height: 20px;
+color: #5A5A5A;
+      /* display: flex;
+      flex-direction: row; */
+  
+      }
+
+      .common-task-cards-bottom-dueDate-doneDiv-active{
+        margin-left: 0px;;
+        background-color: green;
+        color:#EEECEC;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    
+    width: 30px;
+    height: 20px;
+    
+    border-radius: 3px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* Feb 10th */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    
+    
+    }
+    .common-task-cards-bottom-div{
+        /* display: flex;
+         justify-content: space-between;  */
+        /* gap: 1px; */
+        /* height: 25px; */
+        height: auto;
+        display: grid;
+        grid-template-columns: 0.4fr 0.7fr;
+        gap:1px;
+       margin-left: 0px;
+
+        margin-top: 10px;
+        align-items: center;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        width: auto;
+
+       
+        & .common-task-cards-bottom-div-button{
+           
+            display: flex;
+            cursor: pointer;
+            gap:5\3px;
+            width: auto;
+            justify-self: end;
+          /* margin-left: 20px; */
+    
+            & button{
+                /* Frame 5 */
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* BACKLOG */
+    
+    /* width: 30px;
+    height: 25px; */
+    width: auto;
+    height: auto;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 12px;
+    /* identical to box height */
+    
+    color: #767575;
+    border: none;
+    
+    
+    
+    
+    background: #EEECEC;
+    border-radius: 2px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+ 
+    padding: 4px;
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; 
+             
+            }
+        }
+    }
+}

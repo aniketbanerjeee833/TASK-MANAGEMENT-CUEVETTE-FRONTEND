@@ -1,0 +1,31 @@
+.assignTo-div-prefilled-assignees{
+  
+    /* width: 300px; */
+    max-width: 300px; /* Adjust this height as needed */
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: auto;
+        max-height: 30px;/* Set a maximum height for vertical scrolling */
+        /* max-height: 30px; */
+        /* border: 1px solid #ccc;  */
+        /* Optional: add a border */
+        /* height: 30px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        justify-content: flex-start;
+    /* padding: 5px; */
+        /* gap: 10px;; */
+}
+
+.assignTo-div-prefilled-assignees:-webkit-scrollbar {
+    width: 8px;
+}
+
+.assignTo-div-prefilled-assignees::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.assignTo-div-prefilled-assignees::-webkit-scrollbar-thumb {
+    background: #888;
+}
