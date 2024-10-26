@@ -20,10 +20,15 @@ const taskSlice = createSlice({
     singleTaskId:"",
     isEditModalOpen:false,
     taskIdToDelete:"",
-    deleteLoading:false
+    deleteLoading:false,
+    thisWeek1:true
 
   },
   reducers: {
+    setThisWeek1(state,action){
+      state.thisWeek1 = action.payload
+    },
+    
     setTaskIdToDelete(state,action){
       state.taskIdToDelete = action.payload
     },
@@ -182,6 +187,7 @@ export const updateTaskStatus = (taskId,status) => async (dispatch) => {
     });
     console.log(response.data);
     dispatch(getAllMyTasks())
+    dispatch(taskSlice.actions.setThisWeek1(true))
   } catch (error) {
     console.log(error)
   }
@@ -260,7 +266,7 @@ export const deleteMyTasks = (taskId) => async (dispatch) => {
   }
 }
 
-export const { setTaskIdToDelete,setTaskModalOpen,setThreeDotsOpen,setIsDeleteModalOpen,setIsAddPeopleModalOpen,setIsAddPeopleConfirmationModalOpen,setIsAddPeopleSuccessfull,
+export const { setThisWeek1,setTaskIdToDelete,setTaskModalOpen,setThreeDotsOpen,setIsDeleteModalOpen,setIsAddPeopleModalOpen,setIsAddPeopleConfirmationModalOpen,setIsAddPeopleSuccessfull,
   setIsBoardOpen, setIsSettingsOpen, setIsAnalyticsOpen,getAllTasksRequest,getAllTasksSuccess,getAllTasksFailed,
   setSingleTaskId,setIsEditModalOpen
 } = taskSlice.actions

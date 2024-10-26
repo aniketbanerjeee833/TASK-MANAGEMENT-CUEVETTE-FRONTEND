@@ -4,7 +4,7 @@ import "./Home.css"
 import codesandbox from "../../assets/codesandbox.png"
 import { FaChevronDown } from "react-icons/fa"
 import Cards from '../../Components/Cards/Cards'
-import { getAllMyTasks, getAllMyTasksForThisMonth,  getAllMyTasksToday,  getAllTasksFailed, getAllTasksRequest, getAllTasksSuccess, getAnalyticsTask, setIsAddPeopleModalOpen, setIsAnalyticsOpen, setIsBoardOpen, setIsSettingsOpen, updateDueDate } from '../../redux/slice/taskSlice'
+import { getAllMyTasks, getAllMyTasksForThisMonth,  getAllMyTasksToday,  getAllTasksFailed, getAllTasksRequest, getAllTasksSuccess, getAnalyticsTask, setIsAddPeopleModalOpen, setIsAnalyticsOpen, setIsBoardOpen, setIsSettingsOpen, setThisWeek1, updateDueDate } from '../../redux/slice/taskSlice'
 // import TaskModal from '../../Components/TaskModal/TaskModal'
 import Analytics from '../../Components/Analytics/Analytics'
 import { format } from 'date-fns';
@@ -35,12 +35,13 @@ export default function Home() {
     const [formattedDate, setFormattedDate] = useState('');
     const { user, isAuthenticated } = useSelector((state) => state.user)
     const { taskModalOpen, isBoardOpen, isAnalyticsOpen, isSettingsOpen,tasks,isDeleteModalOpen,isAddPeopleConfirmationModalOpen,
-        isAddPeopleModalOpen ,isEditModalOpen} = useSelector((state) => state.task)
+        isAddPeopleModalOpen ,isEditModalOpen,thisWeek1} = useSelector((state) => state.task)
   
     const handleToday = async() => {
         setToday("today")
         setThisMonth("")
         setThisWeek("")
+        dispatch(setThisWeek1(false))
         const day=new Date().getDate();
         // console.log(currentDate.getDate(),currentDate.getMonth())
       
@@ -86,10 +87,11 @@ export default function Home() {
     }
     const handleThisMonth = () => {
        
-
+        dispatch(setThisWeek1(false))
         setToday("")
         setThisMonth("thisMonth")
         setThisWeek("")
+
         const month = new Date().getMonth() + 1; // Current month (1-12)
         const year = new Date().getFullYear();
         console.log(month,year)
@@ -111,15 +113,20 @@ export default function Home() {
 
     const handleBoardOpen=()=>
         {
+            dispatch(setThisWeek1(true))
             dispatch(setIsBoardOpen(true))
             dispatch(setIsAnalyticsOpen(false))
             dispatch(setIsSettingsOpen(false))
-            if(today=="today"){
-                handleToday()
-             }
-             if(thisMonth=="thisMonth"){
-                handleThisMonth()
-             }
+            setToday("")
+            setThisMonth("")
+            setThisWeek("thisWeek")
+            dispatch(getAllMyTasks())
+            // if(today=="today"){
+            //     handleToday()
+            //  }
+            //  if(thisMonth=="thisMonth"){
+            //     handleThisMonth()
+            //  }
         }
         const handleSettingsOpen=()=>
             {
@@ -192,7 +199,7 @@ export default function Home() {
         return () => clearInterval(intervalId);
     }, []);
 
-console.log(today)
+console.log(today,thisWeek1,thisWeek)
     const handleLogout=async()=>
     {
         const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
@@ -282,9 +289,9 @@ console.log(today)
                         </div>
                         <div className='right-home-second-div-dates'>
 
-                            {thisWeek && <span>This Week</span>}
-                            {thisMonth && <span>This Month</span>}
-                            {today && <span>Today</span>}
+                            {(thisWeek=="thisWeek" || thisWeek1) && <span>This Week</span>}
+                            {thisMonth &&!thisWeek1 && <span>This Month</span>}
+                            {today && !thisWeek1&& <span>Today</span>}
                             <FaChevronDown className='right-home-second-div-dates-dropDown-icon' onClick={(e)=>handleTimeSelectDropDown(e)} />
                             {timeSelectDropDownOpen &&<div className='right-home-second-div-dates-dropdown'>
                                 <span onClick={() => handleToday()}>Today</span>

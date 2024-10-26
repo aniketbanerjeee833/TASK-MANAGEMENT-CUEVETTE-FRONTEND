@@ -6,14 +6,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { PiDotsThreeBold } from "react-icons/pi"
 import { FaChevronUp } from "react-icons/fa"
 import { FaChevronDown } from "react-icons/fa"
-import { getAllMyTasks, setIsDeleteModalOpen, setIsEditModalOpen, setSingleTaskId, setTaskIdToDelete, setTaskModalOpen, setThreeDotsOpen, updateTaskStatus } from '../../redux/slice/taskSlice'
+import { getAllMyTasks,
+     setIsDeleteModalOpen, setIsEditModalOpen, setSingleTaskId, setTaskIdToDelete, setTaskModalOpen, setThreeDotsOpen, updateTaskStatus } from '../../redux/slice/taskSlice'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { formatDueDate } from '../../utils/formatter'
 import Spinner from '../Spinner/Spinner'
 export default function Cards() {
     const dispatch=useDispatch()
-    const { tasks,isThreeDotsOpen,tasksLoading } = useSelector((state) => state.task)
+    const { tasks,isThreeDotsOpen,tasksLoading, } = useSelector((state) => state.task)
     const [isChecked1, setIsChecked1] = useState(false);
   
     const [checkListToDoDropDown, setCheckListToDoDropDown] = useState(false)
