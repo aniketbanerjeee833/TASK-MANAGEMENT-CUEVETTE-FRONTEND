@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./AddPeopleModal.css"
 import { useDispatch, useSelector } from 'react-redux'
-import { setIsAddPeopleConfirmationModalOpen, setIsAddPeopleModalOpen, setIsAddPeopleSuccessfull } from '../../redux/slice/taskSlice'
+import { setIsAddPeopleConfirmationModalOpen, setIsAddPeopleModalOpen, setIsAddPeopleSuccessfull, setThisWeek1 } from '../../redux/slice/taskSlice'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 export default function AddPeopleModal() {
@@ -31,6 +31,7 @@ export default function AddPeopleModal() {
             dispatch(setIsAddPeopleSuccessfull(response.data.message))
             dispatch(setIsAddPeopleConfirmationModalOpen(true))
             setAddPeopleLoading(false)
+            dispatch(setThisWeek1(true))
 
           }else{
             toast.error(response?.data?.message)

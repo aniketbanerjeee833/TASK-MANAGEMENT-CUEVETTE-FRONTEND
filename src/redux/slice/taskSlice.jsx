@@ -255,6 +255,7 @@ export const deleteMyTasks = (taskId) => async (dispatch) => {
 
       dispatch(taskSlice.actions.setIsDeleteModalOpen(false))
       dispatch(getAllMyTasks())
+      dispatch(taskSlice.actions.setThisWeek1(true))
     
    
 

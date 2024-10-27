@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../TaskModal1/TaskModal1.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllMyTasks, setTaskModalOpen } from '../../redux/slice/taskSlice';
+import { getAllMyTasks, setTaskModalOpen, setThisWeek1 } from '../../redux/slice/taskSlice';
 import { FaChevronDown } from "react-icons/fa"
 import { toast } from 'react-toastify';
 import DatePicker from "react-datepicker";
@@ -179,6 +179,7 @@ export default function TaskModal1() {
                     dispatch(setTaskModalOpen(false))
                     dispatch(getAllMyTasks())
                     setCreateTaskLoading(false)
+                    dispatch(setThisWeek1(true))
                   
 
                 }
