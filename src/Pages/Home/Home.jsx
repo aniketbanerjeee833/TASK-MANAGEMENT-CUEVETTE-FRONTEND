@@ -4,7 +4,10 @@ import "./Home.css"
 import codesandbox from "../../assets/codesandbox.png"
 import { FaChevronDown } from "react-icons/fa"
 import Cards from '../../Components/Cards/Cards'
-import { getAllMyTasks, getAllMyTasksForThisMonth,  getAllMyTasksToday,  getAllTasksFailed, getAllTasksRequest, getAllTasksSuccess, getAnalyticsTask, setIsAddPeopleModalOpen, setIsAnalyticsOpen, setIsBoardOpen, setIsSettingsOpen, setThisWeek1, updateDueDate } from '../../redux/slice/taskSlice'
+import { getAllMyTasks, getAllMyTasksForThisMonth, 
+     getAllMyTasksToday,  getAllTasksFailed, getAllTasksRequest,
+      getAllTasksSuccess, getAnalyticsTask, setIsAddPeopleModalOpen, setIsAnalyticsOpen,
+       setIsBoardOpen, setIsSettingsOpen, setThisDay1, setThisMonth1, setThisWeek1, updateDueDate,setTimeSelectDropdown } from '../../redux/slice/taskSlice'
 // import TaskModal from '../../Components/TaskModal/TaskModal'
 import Analytics from '../../Components/Analytics/Analytics'
 import { format } from 'date-fns';
@@ -25,79 +28,20 @@ import { IoIosLogOut } from "react-icons/io"
 import { GoPeople } from "react-icons/go"
 import { CiViewBoard } from "react-icons/ci"
 import layout from "../../assets/layout.png"
+
 export default function Home() {
-    const [timeSelectDropDownOpen, setTimeSelectDropDownOpen] = useState(false)
+
     const dispatch = useDispatch()
     const navigate=useNavigate()
-    const [today, setToday] = useState("")
-    const [thisWeek, setThisWeek] = useState("thisWeek")
-    const [thisMonth, setThisMonth] = useState("")
+
     const [formattedDate, setFormattedDate] = useState('');
     const { user, isAuthenticated } = useSelector((state) => state.user)
     const { taskModalOpen, isBoardOpen, isAnalyticsOpen, isSettingsOpen,tasks,isDeleteModalOpen,isAddPeopleConfirmationModalOpen,
-        isAddPeopleModalOpen ,isEditModalOpen,thisWeek1} = useSelector((state) => state.task)
+        isAddPeopleModalOpen ,isEditModalOpen,thisWeek1,thisMonth1,thisDay1,timeSelectDropdown} = useSelector((state) => state.task)
   
-    const handleToday = async() => {
-        setToday("today")
-        setThisMonth("")
-        setThisWeek("")
-        dispatch(setThisWeek1(false))
-        const day=new Date().getDate();
-        // console.log(currentDate.getDate(),currentDate.getMonth())
-      
-    
-        const month = new Date().getMonth() + 1; // Current month (1-12)
-        const year = new Date().getFullYear();
-    
-        const date = `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year}`
-        console.log(date)
-        // dispatch(getAllMyTasksToday(date))
-
-        
-  console.log(date)
-  dispatch(getAllMyTasksToday(date))
-  setTimeSelectDropDownOpen(false)
-//   dispatch(getAllTasksRequest());
-//   try {
-
-
-//     const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasksToday/${date}`,{
-//         headers: {
-//           Authorization: `Bearer ${token}`
-//         }
-//       });
-//       console.log(response)
-//       setTimeSelectDropDownOpen(false)
-//     dispatch(getAllTasksSuccess(response?.data?.tasks));
-
-
-//   } catch (error) {
-//     console.log(error)
-//     dispatch(getAllTasksFailed(error.response?.data?.message));
-//   }
-    }
-    const handleThisWeek = () => {
-        setToday("")
-        setThisMonth("")
-        setThisWeek("thisWeek")
-        dispatch(getAllMyTasks())
-        setTimeSelectDropDownOpen(false)
-        
-
-    }
-    const handleThisMonth = () => {
-       
-        dispatch(setThisWeek1(false))
-        setToday("")
-        setThisMonth("thisMonth")
-        setThisWeek("")
-
-        const month = new Date().getMonth() + 1; // Current month (1-12)
-        const year = new Date().getFullYear();
-        console.log(month,year)
-        dispatch(getAllMyTasksForThisMonth(month,year))
-        setTimeSelectDropDownOpen(false)
-    }
+        const [today, setToday] = useState("")
+        const [thisWeek, setThisWeek] = useState("")
+        const [thisMonth, setThisMonth] = useState("")
 
     const handleAnalyticsOpen=()=>
     {
@@ -111,22 +55,87 @@ export default function Home() {
         //  }
     }
 
+    
+ const handleToday = async() => {
+   
+   
+        setToday("today")
+        setThisMonth("")
+        setThisWeek("")
+        dispatch(setThisWeek1(false))
+    
+        dispatch(setThisMonth1 (false))
+        dispatch(setThisDay1(true))
+    
+        const day=new Date().getDate();
+        // console.log(currentDate.getDate(),currentDate.getMonth())
+      
+    
+        const month = new Date().getMonth() + 1; // Current month (1-12)
+        const year = new Date().getFullYear();
+    
+        const date = `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year}`
+        console.log(date)
+        // dispatch(getAllMyTasksToday(date))
+    
+        
+    console.log(date)
+    dispatch(getAllMyTasksToday(date))
+    dispatch(setTimeSelectDropdown(false))
+    
+    }
+     const handleThisWeek = () => {
+            
+    
+        setToday("")
+        setThisMonth("")
+        setThisWeek("thisWeek")
+        dispatch(getAllMyTasks())
+        dispatch(setTimeSelectDropdown(false))
+    
+        
+        dispatch(setThisMonth1(false))
+        dispatch(setThisDay1(false))
+        dispatch(setThisWeek1(true))
+        
+    
+    }
+    const handleThisMonth = () => {
+       
+        dispatch(setThisMonth1(true))
+        dispatch(setThisDay1(false))
+        dispatch(setThisWeek1(false))
+        setToday("")
+        setThisMonth("thisMonth")
+        setThisWeek("")
+    
+        const month = new Date().getMonth() + 1; // Current month (1-12)
+        const year = new Date().getFullYear();
+        console.log(month,year)
+        dispatch(getAllMyTasksForThisMonth(month,year))
+        dispatch(setTimeSelectDropdown(false))
+    }
     const handleBoardOpen=()=>
         {
             dispatch(setThisWeek1(true))
             dispatch(setIsBoardOpen(true))
             dispatch(setIsAnalyticsOpen(false))
             dispatch(setIsSettingsOpen(false))
-            setToday("")
-            setThisMonth("")
-            setThisWeek("thisWeek")
-            dispatch(getAllMyTasks())
-            // if(today=="today"){
-            //     handleToday()
-            //  }
-            //  if(thisMonth=="thisMonth"){
-            //     handleThisMonth()
-            //  }
+            // setToday("")
+            // setThisMonth("")
+            // setThisWeek("thisWeek")
+            // dispatch(getAllMyTasks())
+            if( thisWeek1){
+                handleThisWeek()
+             }
+
+             if( thisMonth1){
+                handleThisMonth()
+             }
+
+             if(thisDay1){
+                handleToday()
+             }
         }
         const handleSettingsOpen=()=>
             {
@@ -148,24 +157,28 @@ export default function Home() {
             {
                 console.log("hello")
              
-                setTimeSelectDropDownOpen(false)
+                dispatch(setTimeSelectDropdown(false))
                 // closeModal()
             }
             const handleTimeSelectDropDown = (e) => {
                 e.stopPropagation()
             //   openModal()
-                setTimeSelectDropDownOpen(!timeSelectDropDownOpen)
+                // dispatch(setTimeSelectDropdown(!timeSelectDropdown))
+                dispatch(setTimeSelectDropdown(!timeSelectDropdown))
             }
     useEffect(() => {
        
+        if(thisWeek1){
             dispatch(getAllMyTasks())
+        }
+           
         
       
     //  if(today=="today"){
     //     handleToday()
     //  }
 
-    }, [])
+    }, [thisWeek1])
 
     useEffect(()=>{
         
@@ -199,7 +212,7 @@ export default function Home() {
         return () => clearInterval(intervalId);
     }, []);
 
-console.log(today,thisWeek1,thisWeek)
+console.log(thisWeek1,thisMonth1,thisDay1)
     const handleLogout=async()=>
     {
         const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
@@ -289,11 +302,11 @@ console.log(today,thisWeek1,thisWeek)
                         </div>
                         <div className='right-home-second-div-dates'>
 
-                            {(thisWeek=="thisWeek" || thisWeek1) && <span>This Week</span>}
-                            {thisMonth &&!thisWeek1 && <span>This Month</span>}
-                            {today && !thisWeek1&& <span>Today</span>}
+                            {thisWeek1 && <span>This Week</span>}
+                            {!thisWeek1 && thisMonth1&& <span>This Month</span>}
+                            { thisDay1 &&<span>Today</span>}
                             <FaChevronDown className='right-home-second-div-dates-dropDown-icon' onClick={(e)=>handleTimeSelectDropDown(e)} />
-                            {timeSelectDropDownOpen &&<div className='right-home-second-div-dates-dropdown'>
+                            {timeSelectDropdown &&<div className='right-home-second-div-dates-dropdown'>
                                 <span onClick={() => handleToday()}>Today</span>
                                 <span onClick={() => handleThisWeek()}>This Week</span>
                                 <span onClick={() => handleThisMonth()}>This Month</span>

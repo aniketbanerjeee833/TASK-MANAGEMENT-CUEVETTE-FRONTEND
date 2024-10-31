@@ -21,10 +21,24 @@ const taskSlice = createSlice({
     isEditModalOpen:false,
     taskIdToDelete:"",
     deleteLoading:false,
-    thisWeek1:true
+    thisWeek1:true,
+    thisMonth1:false,
+    thisDay1:false,
+    timeSelectDropdown:false
 
   },
   reducers: {
+
+    setTimeSelectDropdown(state,action){
+      state.timeSelectDropdown = action.payload
+    },
+
+    setThisDay1(state,action){
+      state.thisDay1 = action.payload
+    },
+    setThisMonth1(state,action){
+      state.thisMonth1 = action.payload
+    },
     setThisWeek1(state,action){
       state.thisWeek1 = action.payload
     },
@@ -176,22 +190,7 @@ export const updateDueDate = () => async (dispatch) => {
   }
 };
 
-export const updateTaskStatus = (taskId,status) => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
-  // console.log(taskId,status)
-  try {
-    const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateTask/${taskId}`, {status}, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
-    console.log(response.data);
-    dispatch(getAllMyTasks())
-    dispatch(taskSlice.actions.setThisWeek1(true))
-  } catch (error) {
-    console.log(error)
-  }
-};
+
 
 
 export const getAllMyTasksForThisMonth = (month,year) => async (dispatch) => {
@@ -267,7 +266,30 @@ export const deleteMyTasks = (taskId) => async (dispatch) => {
   }
 }
 
-export const { setThisWeek1,setTaskIdToDelete,setTaskModalOpen,setThreeDotsOpen,setIsDeleteModalOpen,setIsAddPeopleModalOpen,setIsAddPeopleConfirmationModalOpen,setIsAddPeopleSuccessfull,
+export const updateTaskStatus = (taskId,status) => async (dispatch) => {
+  const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
+
+  try {
+    const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateTask/${taskId}`, {status}, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+    // console.log(response.data);
+   
+      dispatch(getAllMyTasks())
+      dispatch(taskSlice.actions.setThisWeek1(true))
+    
+   
+   
+   
+ 
+  } catch (error) {
+    console.log(error)
+  }
+};
+export const { setThisDay1,setThisMonth1,setTimeSelectDropdown,
+  setThisWeek1,setTaskIdToDelete,setTaskModalOpen,setThreeDotsOpen,setIsDeleteModalOpen,setIsAddPeopleModalOpen,setIsAddPeopleConfirmationModalOpen,setIsAddPeopleSuccessfull,
   setIsBoardOpen, setIsSettingsOpen, setIsAnalyticsOpen,getAllTasksRequest,getAllTasksSuccess,getAllTasksFailed,
   setSingleTaskId,setIsEditModalOpen
 } = taskSlice.actions

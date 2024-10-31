@@ -14,7 +14,7 @@ import { formatDueDate } from '../../utils/formatter'
 import Spinner from '../Spinner/Spinner'
 export default function Cards() {
     const dispatch=useDispatch()
-    const { tasks,isThreeDotsOpen,tasksLoading, } = useSelector((state) => state.task)
+    const { tasks,isThreeDotsOpen,tasksLoading,thisWeek1,thisMonth1,thisDay1 } = useSelector((state) => state.task)
     const [isChecked1, setIsChecked1] = useState(false);
   
     const [checkListToDoDropDown, setCheckListToDoDropDown] = useState(false)
@@ -113,7 +113,7 @@ const handleCheckListDoneDropDown = (taskId) => {
                     setMultipleDone([])
                 }
     
-
+console.log(thisWeek1,thisDay1,thisMonth1)
     const handleTaskOpen=()=>
     {
         dispatch(setTaskModalOpen(true))
@@ -383,7 +383,16 @@ const handleCheckListDoneDropDown = (taskId) => {
                             (<span className='common-task-cards-title-tooltip'   title={curTask.title}>
                                 {curTask.title.substring(0,10)+"..."}</span>):(
                                 <span className='common-task-cards-title'>{curTask.title}</span>
-                            )}
+                            )} 
+{/* 
+{curTask.title.length > 10 ? (
+    <span className="common-task-cards-title-tooltip">
+        {curTask.title.substring(0, 10) + "..."}
+        <span className="tooltip-text">{curTask.title}</span>
+    </span>
+) : (
+    <span className="common-task-cards-title">{curTask.title}</span>
+)} */}
 
                             <div className='common-task-cards-middle-div' >
                                 <span>CheckList ({displayedCheckList.filter((cur)=>cur.status==true).length}/

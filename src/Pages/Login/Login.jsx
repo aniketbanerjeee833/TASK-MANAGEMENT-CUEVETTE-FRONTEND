@@ -6,7 +6,7 @@ import { fetchUser, setIsAuthenticated, setUser } from '../../redux/slice/userSl
 import "./Login.css"
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { setIsBoardOpen } from '../../redux/slice/taskSlice'
+import { setIsBoardOpen, setThisDay1, setThisWeek1 } from '../../redux/slice/taskSlice'
 import { MdOutlineMail } from "react-icons/md"
 import { IoPersonOutline } from "react-icons/io5"
 import { CiLock } from "react-icons/ci"
@@ -133,6 +133,9 @@ export default function Login() {
           dispatch(setIsBoardOpen(true))
           setLoginLoading(false)
           toast.success(response?.data?.message);
+          dispatch(setThisWeek1(true))
+          dispatch(setThisMonth1(false))
+          dispatch(setThisDay1(false))
         }
       }
       catch (error) {

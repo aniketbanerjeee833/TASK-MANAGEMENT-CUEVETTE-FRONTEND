@@ -327,22 +327,22 @@ color: #000000;
 
     }
 
-.common-task-cards-title{
-    /* Hero section */
+ .common-task-cards-title{
+    
 
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
 line-height: 25px;
-/* identical to box height */
+
 
 color: #000000;
 
 
-}
+} 
 
-.common-task-cards-title-tooltip{
+ .common-task-cards-title-tooltip{
     
     position: relative;
     cursor: pointer;
@@ -351,54 +351,54 @@ font-style: normal;
 font-weight: 500;
 font-size: 20px;
 line-height: 20px;
-/* identical to box height */
+
 
 color: #000000;
-    /* visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0; */
-  
-    /* Position the tooltip */
+
+   
  
   }
-  
-  
+   
+ 
 
-  .common-task-cards-title-tooltip:hover::after {
+   .common-task-cards-title-tooltip:hover::after {
     font-family: 'Poppins';
     background-color: white;
 font-style: normal;
 font-weight: 500;
 font-size: 15px;
 line-height: 20px;
-/* identical to box height */
+
 width: 170px;
 height: 60px;
 
-    content: attr(title); /* Display the full title */
+    content: attr(title); 
     position: absolute;
-    /* background: #333;  */
+   
 color: black;
     padding: 5px;
     border-radius: 5px;
-    /* overflow: hidden; */
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden; 
     overflow-wrap: break-word;
-    /* white-space: nowrap;  */
+   
     white-space: normal;
     z-index: 10;
     bottom: calc(100% + 5px);
    
-    /* Position above the element with a small gap */
-    left: 5%; /* Center tooltip */
-    /* transform: translateX(-50%); */
-    visibility: visible; /* Make it visible */
-    opacity: 1; /* Ensure opacity */
-}
+  
+    left: 5%; 
+    visibility: visible; 
+    opacity: 1; 
+   
+    transition: visibility 0s, opacity 0.2s ease-in-out;
+    pointer-events: auto;  
+} 
+.common-task-cards-title-tooltip::after {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.2s ease-in-out;
+  }
+
 
 .delete-span{
     color: red;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../TaskModal1/TaskModal1.css"
 import "./EditTask.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllMyTasks, setIsEditModalOpen, setThisWeek1, setThreeDotsOpen } from '../../redux/slice/taskSlice';
+import { getAllMyTasks, setIsEditModalOpen, setThisWeek1, setThreeDotsOpen, updateDueDate } from '../../redux/slice/taskSlice';
 import { FaChevronDown } from "react-icons/fa"
 import axios from 'axios';
 import { getAllPossibleAssigneeList, setOpenAssigneeList } from '../../redux/slice/userSlice';
@@ -208,6 +208,7 @@ export default function EditTask() {
           setEditTaskLoading(false)
           dispatch(setIsEditModalOpen(false))
           dispatch(setThisWeek1(true))
+          dispatch(updateDueDate())
 
         }
       } catch (error) {
