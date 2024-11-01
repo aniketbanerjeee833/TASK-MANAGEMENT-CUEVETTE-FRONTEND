@@ -7,7 +7,8 @@ import Cards from '../../Components/Cards/Cards'
 import { getAllMyTasks, getAllMyTasksForThisMonth, 
      getAllMyTasksToday,  getAllTasksFailed, getAllTasksRequest,
       getAllTasksSuccess, getAnalyticsTask, setIsAddPeopleModalOpen, setIsAnalyticsOpen,
-       setIsBoardOpen, setIsSettingsOpen, setThisDay1, setThisMonth1, setThisWeek1, updateDueDate,setTimeSelectDropdown } from '../../redux/slice/taskSlice'
+       setIsBoardOpen, setIsSettingsOpen, setThisDay1, setThisMonth1, setThisWeek1, updateDueDate,setTimeSelectDropdown, 
+       setTasks} from '../../redux/slice/taskSlice'
 // import TaskModal from '../../Components/TaskModal/TaskModal'
 import Analytics from '../../Components/Analytics/Analytics'
 import { format } from 'date-fns';
@@ -178,7 +179,7 @@ export default function Home() {
     //     handleToday()
     //  }
 
-    }, [])
+    }, [user])
 
     useEffect(()=>{
         
@@ -232,6 +233,8 @@ console.log(thisWeek1,thisMonth1,thisDay1)
             dispatch(logoutSuccess());
             toast.success(response.data.message);
             navigate("/login")
+            dispatch(setThisWeek1(false))
+            dispatch(setTasks())
             // window.location.href = "/login"
             
           }

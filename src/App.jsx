@@ -19,7 +19,7 @@ import ProtectedRoute from "./utils/ProtectedRoute";
 
 export default function App() {
   const dispatch=useDispatch()
- 
+
 
    const{isAuthenticated,user}=useSelector((state)=>state.user)
    const{tasks}=useSelector((state)=>state.task)

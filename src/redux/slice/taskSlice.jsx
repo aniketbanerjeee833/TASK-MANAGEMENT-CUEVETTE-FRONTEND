@@ -29,6 +29,9 @@ const taskSlice = createSlice({
   },
   reducers: {
 
+    setTasks(state,action){
+      state.tasks = []
+    },
     setTimeSelectDropdown(state,action){
       state.timeSelectDropdown = action.payload
     },
@@ -288,7 +291,7 @@ export const updateTaskStatus = (taskId,status) => async (dispatch) => {
     console.log(error)
   }
 };
-export const { setThisDay1,setThisMonth1,setTimeSelectDropdown,
+export const { setThisDay1,setThisMonth1,setTimeSelectDropdown,setTasks,
   setThisWeek1,setTaskIdToDelete,setTaskModalOpen,setThreeDotsOpen,setIsDeleteModalOpen,setIsAddPeopleModalOpen,setIsAddPeopleConfirmationModalOpen,setIsAddPeopleSuccessfull,
   setIsBoardOpen, setIsSettingsOpen, setIsAnalyticsOpen,getAllTasksRequest,getAllTasksSuccess,getAllTasksFailed,
   setSingleTaskId,setIsEditModalOpen
