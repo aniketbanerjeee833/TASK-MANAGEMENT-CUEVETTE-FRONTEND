@@ -19,7 +19,7 @@ export default function AddPeopleModal() {
         const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
         setAddPeopleLoading(true)
         try {
-          const response = await axios.put("https://task-management-cuevette-backend.onrender.co/api/v1/task/addAlltasks", {email},{
+          const response = await axios.put("https://task-management-cuevette-backend.onrender.com/api/v1/task/addAlltasks", {email},{
             headers: {
               Authorization: `Bearer ${token}`
             }

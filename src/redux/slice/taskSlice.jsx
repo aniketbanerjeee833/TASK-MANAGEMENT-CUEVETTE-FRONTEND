@@ -124,7 +124,7 @@ export const getAllMyTasks = () => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
   dispatch(taskSlice.actions.getAllTasksRequest());
   try {
-    const response = await axios.get("https://task-management-cuevette-backend.onrender.co/api/v1/task/allMyTasks", {
+    const response = await axios.get("https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasks", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -143,7 +143,7 @@ export const getAnalyticsTask = () => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
   try {
-    const response = await axios.get("https://task-management-cuevette-backend.onrender.co/api/v1/task/analyticsTask", {
+    const response = await axios.get("https://task-management-cuevette-backend.onrender.com/api/v1/task/analyticsTask", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -162,7 +162,7 @@ export const updateCheckListStatus = () => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
   dispatch(taskSlice.actions.getAllTasksRequest());
   try {
-    const response = await axios.put(`https://task-management-cuevette-backend.onrender.co/api/v1/task/allMyTasks${taskId}/${checkListId}`, {
+    const response = await axios.put(`https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasks${taskId}/${checkListId}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -181,7 +181,7 @@ export const updateDueDate = () => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
   console.log(token)
   try {
-    const response = await axios.patch("https://task-management-cuevette-backend.onrender.co/api/v1/task/updateDueDate", {}, {
+    const response = await axios.patch("https://task-management-cuevette-backend.onrender.com/api/v1/task/updateDueDate", {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -201,7 +201,7 @@ export const getAllMyTasksForThisMonth = (month,year) => async (dispatch) => {
   // console.log(month,year,token)
   dispatch(taskSlice.actions.getAllTasksRequest());
   try {
-    const response = await axios.get(`https://task-management-cuevette-backend.onrender.co/api/v1/task/allMyTasksThisMonth/${month}/${year}`,{
+    const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasksThisMonth/${month}/${year}`,{
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -224,7 +224,7 @@ export const getAllMyTasksToday = (date) => async (dispatch) => {
   try {
 
 
-    const response = await axios.get(`https://task-management-cuevette-backend.onrender.co/api/v1/task/allMyTasksToday/${date}`,{
+    const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/allMyTasksToday/${date}`,{
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -245,7 +245,7 @@ export const deleteMyTasks = (taskId) => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
   dispatch(taskSlice.actions.deleteTaskRequest());
   try {
-    const response = await axios.delete(`https://task-management-cuevette-backend.onrender.co/api/v1/task/deletetask/${taskId}`, {
+    const response = await axios.delete(`https://task-management-cuevette-backend.onrender.com/api/v1/task/deletetask/${taskId}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -273,7 +273,7 @@ export const updateTaskStatus = (taskId,status) => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
   try {
-    const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/updateTask/${taskId}`, {status}, {
+    const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateTask/${taskId}`, {status}, {
       headers: {
         Authorization: `Bearer ${token}`
       }

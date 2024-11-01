@@ -227,7 +227,7 @@ console.log(thisWeek1,thisDay1,thisMonth1)
             
            
             // try {
-            //   const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
+            //   const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
             //     headers: {
             //       Authorization: `Bearer ${token}`
             //     }
@@ -245,7 +245,7 @@ console.log(thisWeek1,thisDay1,thisMonth1)
             const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
             try {
-              const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
+              const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
                 headers: {
                   Authorization: `Bearer ${token}`
                 }
