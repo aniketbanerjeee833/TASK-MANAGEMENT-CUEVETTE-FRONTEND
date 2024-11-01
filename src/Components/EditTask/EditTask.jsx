@@ -99,7 +99,7 @@ export default function EditTask() {
     const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
     try {
-      const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/singleTaskForEdit/${singleTaskId}`, {
+      const response = await axios.get(`https://task-management-cuevette-backend.onrender.co/api/v1/task/singleTaskForEdit/${singleTaskId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -194,7 +194,7 @@ export default function EditTask() {
     } else {
       try {
         setEditTaskLoading(true)
-        const response = await axios.patch(`https://task-management-cuevette-backend.onrender.com/api/v1/task/editTask/${singleTaskId}`, { checkList, priority, title, dueDate, assigned },
+        const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/editTask/${singleTaskId}`, { checkList, priority, title, dueDate, assigned },
           {
             headers: {
               Authorization: `Bearer ${token}`

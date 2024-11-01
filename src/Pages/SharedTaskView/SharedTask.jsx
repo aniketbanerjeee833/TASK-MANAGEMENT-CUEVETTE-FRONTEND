@@ -16,7 +16,7 @@ export default function SharedTask() {
 
 
     try {
-      const response = await axios.get(`https://task-management-cuevette-backend.onrender.com/api/v1/task/sharedTask/${taskId}`,
+      const response = await axios.get(`https://task-management-cuevette-backend.onrender.co/api/v1/task/sharedTask/${taskId}`,
 
       );
 
