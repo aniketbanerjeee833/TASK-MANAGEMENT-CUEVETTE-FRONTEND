@@ -218,7 +218,7 @@ console.log(thisWeek1,thisMonth1,thisDay1)
         const token=JSON.parse(localStorage.getItem("APP-TOKEN"))
         try {
           const response = await axios.get(
-            "http://localhost:5000/api/v1/user/logout",
+            "https://task-management-cuevette-backend.onrender.co/api/v1/user/logout",
             {
               headers: {
                   Authorization: `Bearer ${token}`
