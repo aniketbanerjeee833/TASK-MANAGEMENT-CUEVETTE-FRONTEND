@@ -227,7 +227,7 @@ console.log(thisWeek1,thisDay1,thisMonth1)
             
            
             // try {
-            //   const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
+            //   const response = await axios.patch(`http://localhost:5000/api/v1/task/updateTask/${taskId}/${checkListId}`, {status}, {
             //     headers: {
             //       Authorization: `Bearer ${token}`
             //     }
@@ -245,7 +245,7 @@ console.log(thisWeek1,thisDay1,thisMonth1)
             const token = JSON.parse(localStorage.getItem("APP-TOKEN"))
 
             try {
-              const response = await axios.patch(`https://task-management-cuevette-backend.onrender.co/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
+              const response = await axios.patch(`http://localhost:5000/api/v1/task/updateCheckListStatus/${taskId}`,{updatedCheckList} ,{
                 headers: {
                   Authorization: `Bearer ${token}`
                 }
@@ -315,8 +315,8 @@ console.log(thisWeek1,thisDay1,thisMonth1)
             setMultipleThreeDotsToDo([]);
             setMultipleThreeDotsInProgress([])
             setMultipleThreeDotsDone([])
-        //  navigator.clipboard.writeText(`http://localhost:5173/singleTask/${taskId}`)
-            navigator.clipboard.writeText(`https://task-management-cuevette-frontend.vercel.app/singleTask/${taskId}`)
+         navigator.clipboard.writeText(`http://localhost:5173/singleTask/${taskId}`)
+           // navigator.clipboard.writeText(`https://task-management-cuevette-frontend.vercel.app/singleTask/${taskId}`)
             //navigator.clipboard.writeText(`http://localhost:5173/singleStory/${singleStoryId}/${currentIndex}`)
     //navigator.clipboard.writeText(`https://social-media-cuevette-frontend-three.vercel.app/${singleStoryId}/${currentIndex}`)
       //navigator.clipboard.writeText(`https://social-media-cuevette-frontend-three.vercel.app/singleStory/${singleStoryId}/${currentIndex}`)
